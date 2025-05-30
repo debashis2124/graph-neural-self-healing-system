@@ -1,0 +1,13 @@
+### ✅ `requirements.txt`
+
+```text
+torch
+torch-geometric
+pandas
+numpy
+scikit-learn
+matplotlib
+networkx
+imblearn
+openpyxl
+tabulate
