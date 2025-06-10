@@ -43,4 +43,4 @@ Training curves (loss, accuracy, F1)
 
 ✍️ Authors
 Developed by Dr. Debashis Das
-Postdoctoral Researcher | Meharry Medical College
+Postdoctoral Researcher | Meharry School of Applied Computational Sciences
