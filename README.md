@@ -1,51 +1,53 @@
-#Self-Healing Graph Neural Network for Supply Chain Anomaly Detection
-A PyTorch Geometric-based framework for anomaly detection and autonomous self-healing in supply chain logistics graphs. This system constructs similarity graphs from structured order data, applies advanced GNN models (GCN, GAT, GraphSAGE, GIN), detects compromised nodes, and automatically "heals" the graph by removing detected anomalies.
+Self-Healing GNN for Supply Chain
+This project uses graph neural networks (GNNs) to find and fix (self-heal) problems in supply chain data. It uses order data to build graphs, detects "compromised" (anomalous) nodes, and removes them to improve the graph.
 
-#🚀 Features
-Dynamic Graph Construction: Builds k-NN similarity graphs from supply chain logistics records.
+🚀 What it Does
+Makes graphs from logistics (order) data
 
-Imbalance Handling: Applies SMOTE to address class imbalance between healthy and compromised nodes.
+Fixes class imbalance using SMOTE
 
-Multi-Model Support: Supports GCN, GAT, GraphSAGE, and GIN binary classifiers (Healthy vs. Compromised).
+Trains different GNN models (GCN, GAT, GraphSAGE, GIN)
 
-Self-Healing Logic: Automatically removes predicted compromised nodes, enabling self-healing supply chain graphs.
+Finds compromised nodes (bad/at-risk orders)
 
-Comprehensive Evaluation: Computes precision, recall, F1, specificity, accuracy, confusion matrices, and healing audit tables.
+Removes compromised nodes to heal the graph
 
-Rich Visualizations: Provides training curves (loss, accuracy, F1), healing impact visualizations, confusion matrices, and graph snapshots before/after healing.
+Shows results: accuracy, F1 score, recall, precision, specificity
 
-#📁 Project Structure
-css
+Draws plots for metrics and healing effect
+
+📂 Project Files
+bash
 Copy
 Edit
-├── main.py
-├── requirements.txt
-├── LICENSE
-├── README.md
-├── utils/
-│   ├── load_data.py
-│   └── graph_utils.py
-├── model/
-│   └── gcn.py
-├── training/
-│   └── train_eval.py
-├── healing/
-│   ├── graph_healing.py
-│   └── visualization.py
-#📝 Outputs
-Classification Reports: Precision, recall, F1, and specificity before and after healing.
+main.py               # Main script to run everything
+requirements.txt      # List of packages to install
+LICENSE
+README.md
+utils/
+    load_data.py      # For reading and preparing data
+    graph_utils.py    # Helpers for graph operations
+model/
+    gcn.py            # GCN model code
+training/
+    train_eval.py     # Training and evaluation functions
+healing/
+    graph_healing.py  # Healing (removal) functions
+    visualization.py  # Plots and graph visuals
+📊 What You Get
+Classification reports (before/after healing)
 
-Healing Effect Summaries: Audit tables showing node status transitions (TP, FP, TN, FN).
+Healing effect summary table
 
-Graph Visualizations: Node classification results and healed graph structure.
+Graph plots (before and after healing)
 
-Confusion Matrices: For each GNN model.
+Confusion matrices for each GNN
 
-Training Curves: Loss, accuracy, F1 progression, and more.
+Training curves (loss, accuracy, F1 score)
 
-#Get Started:
-See main.py for an end-to-end demonstration and experiment script.
-Check requirements.txt for dependencies and installation instructions.
+To start:
+Check main.py to run an experiment.
+See requirements.txt for what to install.
 
 ✍️ Authors
 Developed by Dr. Debashis Das
